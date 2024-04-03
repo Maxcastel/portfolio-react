@@ -1,0 +1,12 @@
+{
+    "projets": "Projects",
+    "competences": "Skills",
+    "experience": "Experience",
+
+    "developpeurfullstack": "Full Stack Developpeur",
+
+    "langues": {
+        "francais": "French",
+        "anglais": "English"
+    }
+}
