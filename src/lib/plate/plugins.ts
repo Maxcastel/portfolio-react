@@ -15,15 +15,20 @@ import {
 } from '@udecode/plate-heading';
 import { HeadingElement } from '@/components/plate-ui/heading-element';
 import { withPlaceholders } from '@/components/plate-ui/placeholder';
-
+import { 
+    createBoldPlugin, 
+    MARK_BOLD,
+} from '@udecode/plate-basic-marks';
 
 export const plugins = createPlugins(
     [
         createParagraphPlugin(),
         createHeadingPlugin(),
+        createBoldPlugin(),
     ],
     {
         components: withPlaceholders({
+            [MARK_BOLD]: withProps(PlateLeaf, { as: 'strong' }),
             [ELEMENT_PARAGRAPH]: withProps(HeadingElement, { variant: 'p' }),
             [ELEMENT_H1]: withProps(HeadingElement, { variant: 'h1' }),
             [ELEMENT_H2]: withProps(HeadingElement, { variant: 'h2' }),
