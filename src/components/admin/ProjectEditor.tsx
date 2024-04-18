@@ -1,6 +1,6 @@
-import { Plate } from '@udecode/plate-common';
+import { Plate, Value } from '@udecode/plate-common';
 import { Editor } from '@/components/plate-ui/editor';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { cn } from '@udecode/cn';
 import { FixedToolbar } from '../plate-ui/fixed-toolbar';
 import { FixedToolbarButtons } from '../plate-ui/fixed-toolbar-buttons';
@@ -11,6 +11,7 @@ import { plugins } from '@/lib/plate/plugins';
 import { 
     ELEMENT_PARAGRAPH 
 } from '@udecode/plate-paragraph';
+import { useEditor } from '@/hooks/useEditor';
 
 const initialValue = [
     {
@@ -20,6 +21,7 @@ const initialValue = [
 ];
 
 export function ProjectEditor(){
+    const [contentJson, setContentJson] = useEditor(initialValue);
     const containerRef = useRef(null);
 
     return (
@@ -29,8 +31,8 @@ export function ProjectEditor(){
                     <Plate 
                         plugins={plugins}
                         initialValue={initialValue}
-                        onChange={(newValue) => {
-                            
+                        onChange={(newValue:Value) => {
+                            setContentJson(newValue)
                         }}
                     >
                         <div
@@ -60,6 +62,17 @@ export function ProjectEditor(){
                     </Plate>
                 </div>
             </TooltipProvider>
+
+            <div className='mt-8'>
+                <p className='text-xl mb-6'>Json:</p>
+                <p className='text-xl'>
+                    {contentJson}
+                </p>
+            </div>
+
+            
         </div>
+
+        
     )
 }
