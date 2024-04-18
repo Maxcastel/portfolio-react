@@ -14,6 +14,7 @@ import { MarkToolbarButton } from './mark-toolbar-button';
 import { ModeDropdownMenu } from './mode-dropdown-menu';
 import { ToolbarGroup } from './toolbar';
 import { TurnIntoDropdownMenu } from './turn-into-dropdown-menu';
+import { AlignDropdownMenu } from './align-dropdown-menu';
 
 export function FixedToolbarButtons() {
   const readOnly = useEditorReadOnly();
@@ -37,9 +38,11 @@ export function FixedToolbarButtons() {
               <MarkToolbarButton tooltip="Bold (⌘+B)" nodeType={MARK_BOLD}>
                 <Icons.bold />
               </MarkToolbarButton>
+
               <MarkToolbarButton tooltip="Italic (⌘+I)" nodeType={MARK_ITALIC}>
                 <Icons.italic />
               </MarkToolbarButton>
+
               <MarkToolbarButton
                 tooltip="Underline (⌘+U)"
                 nodeType={MARK_UNDERLINE}
@@ -53,9 +56,12 @@ export function FixedToolbarButtons() {
               >
                 <Icons.strikethrough />
               </MarkToolbarButton>
+
               <MarkToolbarButton tooltip="Code (⌘+E)" nodeType={MARK_CODE}>
                 <Icons.code />
               </MarkToolbarButton>
+
+              <AlignDropdownMenu />
             </ToolbarGroup>
           </>
         )}
