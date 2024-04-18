@@ -1,5 +1,4 @@
 import { DropdownMenuProps } from '@radix-ui/react-dropdown-menu';
-import { ELEMENT_BLOCKQUOTE } from '@udecode/plate-block-quote';
 import {
   collapseSelection,
   findNode,
@@ -11,7 +10,14 @@ import {
   useEditorRef,
   useEditorSelector,
 } from '@udecode/plate-common';
-import { ELEMENT_H1, ELEMENT_H2, ELEMENT_H3 } from '@udecode/plate-heading';
+import { 
+  ELEMENT_H1, 
+  ELEMENT_H2, 
+  ELEMENT_H3, 
+  ELEMENT_H4, 
+  ELEMENT_H5, 
+  ELEMENT_H6 
+} from '@udecode/plate-heading';
 import { ELEMENT_PARAGRAPH } from '@udecode/plate-paragraph';
 
 import { Icons } from '@/components/icons';
@@ -51,6 +57,24 @@ const items = [
     label: 'Heading 3',
     description: 'Heading 3',
     icon: Icons.h3,
+  },
+  {
+    value: ELEMENT_H4,
+    label: 'Heading 4',
+    description: 'Heading 4',
+    icon: Icons.h4,
+  },
+  {
+    value: ELEMENT_H5,
+    label: 'Heading 5',
+    description: 'Heading 5',
+    icon: Icons.h5,
+  },
+  {
+    value: ELEMENT_H6,
+    label: 'Heading 6',
+    description: 'Heading 6',
+    icon: Icons.h6,
   },
 ];
 
