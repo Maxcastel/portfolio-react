@@ -25,6 +25,8 @@ import {
     createStrikethroughPlugin,
     MARK_STRIKETHROUGH,
 } from '@udecode/plate-basic-marks';
+import { createAlignPlugin } from '@udecode/plate-alignment';
+
 
 export const plugins = createPlugins(
     [
@@ -34,6 +36,21 @@ export const plugins = createPlugins(
         createItalicPlugin(),
         createUnderlinePlugin(),
         createStrikethroughPlugin(),
+        createAlignPlugin({
+            inject: {
+              props: {
+                validTypes: [
+                  ELEMENT_PARAGRAPH,
+                  ELEMENT_H1,
+                  ELEMENT_H2,
+                  ELEMENT_H3,
+                  ELEMENT_H4,
+                  ELEMENT_H5,
+                  ELEMENT_H6,
+                ],
+              },
+            },
+          }),
     ],
     {
         components: withPlaceholders({
