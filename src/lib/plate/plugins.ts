@@ -22,6 +22,8 @@ import {
     MARK_ITALIC,
     createUnderlinePlugin,
     MARK_UNDERLINE,
+    createStrikethroughPlugin,
+    MARK_STRIKETHROUGH,
 } from '@udecode/plate-basic-marks';
 
 export const plugins = createPlugins(
@@ -31,12 +33,14 @@ export const plugins = createPlugins(
         createBoldPlugin(),
         createItalicPlugin(),
         createUnderlinePlugin(),
+        createStrikethroughPlugin(),
     ],
     {
         components: withPlaceholders({
             [MARK_BOLD]: withProps(PlateLeaf, { as: 'strong' }),
             [MARK_ITALIC]: withProps(PlateLeaf, { as: 'i' }),
             [MARK_UNDERLINE]: withProps(PlateLeaf, { as: 'u' }),
+            [MARK_STRIKETHROUGH]: withProps(PlateLeaf, { as: 's' }),
             [ELEMENT_PARAGRAPH]: withProps(HeadingElement, { variant: 'p' }),
             [ELEMENT_H1]: withProps(HeadingElement, { variant: 'h1' }),
             [ELEMENT_H2]: withProps(HeadingElement, { variant: 'h2' }),
