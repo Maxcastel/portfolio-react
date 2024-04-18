@@ -33,6 +33,20 @@ export function useEditor(initialValue:Value){
                         break;
                 }
 
+                if (element.align){
+                    switch (element.align){
+                        case "center":
+                            className += " text-center"
+                            break;
+                        case "left":
+                            className += " text-left"
+                            break;
+                        case "right":
+                            className += " text-right"
+                            break;
+                    }
+                }
+
                 return (
                     createElement(element.type, { className }, element.children.map((text) => {
                         let className:string="";
