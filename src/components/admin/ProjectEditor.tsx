@@ -21,7 +21,7 @@ const initialValue = [
 ];
 
 export function ProjectEditor(){
-    const [contentJson, setContentJson] = useEditor(initialValue);
+    const [contentJson, setContentJson, contentHtml] = useEditor(initialValue);
     const containerRef = useRef(null);
 
     return (
@@ -68,6 +68,13 @@ export function ProjectEditor(){
                 <p className='text-xl'>
                     {contentJson}
                 </p>
+            </div>
+
+            <div className='mt-8'>
+                <p className='text-xl mb-6'>Preview:</p>
+                <div className='mt-6 border border-black w-full px-[50px] py-16'>
+                    {contentHtml}
+                </div>
             </div>
 
             
