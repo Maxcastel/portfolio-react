@@ -1,4 +1,8 @@
-import { createPlugins, PlateLeaf } from '@udecode/plate-common';
+import { 
+    createPlugins, 
+    PlateLeaf, 
+    RenderAfterEditable 
+} from '@udecode/plate-common';
 import { withProps } from '@udecode/cn';
 import { 
     createParagraphPlugin, 
@@ -35,6 +39,9 @@ import {
     createFontBackgroundColorPlugin,
     createFontColorPlugin,
 } from '@udecode/plate-font';
+import { createLinkPlugin, ELEMENT_LINK } from '@udecode/plate-link';
+import { LinkElement } from '@/components/plate-ui/link-element';
+import { LinkFloatingToolbar } from '@/components/plate-ui/link-floating-toolbar';
 
 
 export const plugins = createPlugins(
@@ -64,6 +71,9 @@ export const plugins = createPlugins(
         createImagePlugin(),
         createFontColorPlugin(),
         createFontBackgroundColorPlugin(),
+        createLinkPlugin({
+            renderAfterEditable: LinkFloatingToolbar as RenderAfterEditable,
+        }),
     ],
     {
         components: withPlaceholders({
@@ -79,6 +89,7 @@ export const plugins = createPlugins(
             [ELEMENT_H5]: withProps(HeadingElement, { variant: 'h5' }),
             [ELEMENT_H6]: withProps(HeadingElement, { variant: 'h6' }),
             [ELEMENT_IMAGE]: ImageElement,
+            [ELEMENT_LINK]: LinkElement,
         })
     }
 );
