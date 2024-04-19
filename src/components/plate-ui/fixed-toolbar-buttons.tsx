@@ -7,7 +7,7 @@ import {
 } from '@udecode/plate-basic-marks';
 import { useEditorReadOnly } from '@udecode/plate-common';
 
-import { Icons } from '@/components/icons';
+import { Icons, iconVariants } from '@/components/icons';
 
 import { InsertDropdownMenu } from './insert-dropdown-menu';
 import { MarkToolbarButton } from './mark-toolbar-button';
@@ -17,6 +17,8 @@ import { TurnIntoDropdownMenu } from './turn-into-dropdown-menu';
 import { AlignDropdownMenu } from './align-dropdown-menu';
 import { ELEMENT_IMAGE } from '@udecode/plate-media';
 import { MediaToolbarButton } from './media-toolbar-button';
+import { ColorDropdownMenu } from './color-dropdown-menu';
+import { MARK_COLOR } from '@udecode/plate-font';
 
 export function FixedToolbarButtons() {
   const readOnly = useEditorReadOnly();
@@ -62,6 +64,10 @@ export function FixedToolbarButtons() {
               <MarkToolbarButton tooltip="Code (⌘+E)" nodeType={MARK_CODE}>
                 <Icons.code />
               </MarkToolbarButton>
+
+              <ColorDropdownMenu nodeType={MARK_COLOR} tooltip="Text Color">
+                <Icons.color className={iconVariants({ variant: 'toolbar' })} />
+              </ColorDropdownMenu>
 
               <AlignDropdownMenu />
             </ToolbarGroup>
