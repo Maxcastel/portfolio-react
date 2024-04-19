@@ -19,6 +19,7 @@ import { ELEMENT_IMAGE } from '@udecode/plate-media';
 import { MediaToolbarButton } from './media-toolbar-button';
 import { ColorDropdownMenu } from './color-dropdown-menu';
 import { MARK_BG_COLOR, MARK_COLOR } from '@udecode/plate-font';
+import { LinkToolbarButton } from './link-toolbar-button';
 
 export function FixedToolbarButtons() {
   const readOnly = useEditorReadOnly();
@@ -80,6 +81,8 @@ export function FixedToolbarButtons() {
             </ToolbarGroup>
 
             <ToolbarGroup>
+              <LinkToolbarButton />
+
               <MediaToolbarButton nodeType={ELEMENT_IMAGE} />
             </ToolbarGroup>
           </>
