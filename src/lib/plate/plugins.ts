@@ -26,6 +26,11 @@ import {
     MARK_STRIKETHROUGH,
 } from '@udecode/plate-basic-marks';
 import { createAlignPlugin } from '@udecode/plate-alignment';
+import { ImageElement } from '@/components/plate-ui/image-element';
+import {
+    createImagePlugin,
+    ELEMENT_IMAGE,
+} from '@udecode/plate-media';
 
 
 export const plugins = createPlugins(
@@ -47,10 +52,12 @@ export const plugins = createPlugins(
                   ELEMENT_H4,
                   ELEMENT_H5,
                   ELEMENT_H6,
+                  ELEMENT_IMAGE
                 ],
               },
             },
-          }),
+        }),
+        createImagePlugin(),
     ],
     {
         components: withPlaceholders({
@@ -65,6 +72,7 @@ export const plugins = createPlugins(
             [ELEMENT_H4]: withProps(HeadingElement, { variant: 'h4' }),
             [ELEMENT_H5]: withProps(HeadingElement, { variant: 'h5' }),
             [ELEMENT_H6]: withProps(HeadingElement, { variant: 'h6' }),
+            [ELEMENT_IMAGE]: ImageElement,
         })
     }
 );

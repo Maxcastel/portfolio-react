@@ -1,4 +1,4 @@
-import { Value } from "@udecode/plate-common";
+import { TElement, TText, Value } from "@udecode/plate-common";
 import { createElement, useEffect, useState } from "react";
 
 export function useEditor(initialValue:Value){
@@ -7,7 +7,7 @@ export function useEditor(initialValue:Value){
 
     useEffect(() => {
         const element = createElement("div", null,
-            contentJson.map((element) => {
+            contentJson.map((element:TElement) => {
                 let className:string="";
                 switch (element.type){
                     case "p":
@@ -47,7 +47,31 @@ export function useEditor(initialValue:Value){
                     }
                 }
 
+                const firstChildText = element.children[0].text as TText;
+
+                if(firstChildText.length === 0){
+                    className += " h-[28px]"
+                }
+
                 return (
+                    element.type === "img" ?
+                        element.caption ?
+                            createElement("div", { className: "py-2.5" },
+                                createElement("figure", { className: "group relative m-0" },
+                                    createElement("div", { className: "flex flex-col mx-auto", style:{width: element.width} },
+                                        createElement(element.type, { className, src: element.url }, null)
+                                    ),
+                                    createElement("figcaption", { className: "max-w-full mx-auto", style:{width: element.width} },
+                                        createElement("p", { className: "mt-2 w-full text-center h-6 bg-red-100" }, element.caption[0].text as string)
+                                    ) 
+                                )
+                            )
+                        :  createElement("div", { className: "py-2.5" },
+                                createElement("div", { className: "flex flex-col mx-auto", style:{width: element.width} },
+                                    createElement(element.type, { className, src: element.url }, null)
+                                ) 
+                            )
+                    :
                     createElement(element.type, { className }, element.children.map((text) => {
                         let className:string="";
                         if (text.bold){ className += " font-bold" }
@@ -67,7 +91,8 @@ export function useEditor(initialValue:Value){
     }, [contentJson])
     
     return [
-        JSON.stringify(contentJson, null, 2), 
+        // JSON.stringify(contentJson, null, 2), 
+        JSON.stringify(contentJson), 
         setContentJson,
         contentHtml
     ] as const
