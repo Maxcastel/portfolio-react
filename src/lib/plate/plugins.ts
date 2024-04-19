@@ -32,6 +32,7 @@ import {
     ELEMENT_IMAGE,
 } from '@udecode/plate-media';
 import {
+    createFontBackgroundColorPlugin,
     createFontColorPlugin,
 } from '@udecode/plate-font';
 
@@ -62,6 +63,7 @@ export const plugins = createPlugins(
         }),
         createImagePlugin(),
         createFontColorPlugin(),
+        createFontBackgroundColorPlugin(),
     ],
     {
         components: withPlaceholders({
