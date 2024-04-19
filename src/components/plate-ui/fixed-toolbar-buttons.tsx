@@ -15,6 +15,8 @@ import { ModeDropdownMenu } from './mode-dropdown-menu';
 import { ToolbarGroup } from './toolbar';
 import { TurnIntoDropdownMenu } from './turn-into-dropdown-menu';
 import { AlignDropdownMenu } from './align-dropdown-menu';
+import { ELEMENT_IMAGE } from '@udecode/plate-media';
+import { MediaToolbarButton } from './media-toolbar-button';
 
 export function FixedToolbarButtons() {
   const readOnly = useEditorReadOnly();
@@ -62,6 +64,10 @@ export function FixedToolbarButtons() {
               </MarkToolbarButton>
 
               <AlignDropdownMenu />
+            </ToolbarGroup>
+
+            <ToolbarGroup>
+              <MediaToolbarButton nodeType={ELEMENT_IMAGE} />
             </ToolbarGroup>
           </>
         )}
