@@ -18,7 +18,7 @@ import { AlignDropdownMenu } from './align-dropdown-menu';
 import { ELEMENT_IMAGE } from '@udecode/plate-media';
 import { MediaToolbarButton } from './media-toolbar-button';
 import { ColorDropdownMenu } from './color-dropdown-menu';
-import { MARK_COLOR } from '@udecode/plate-font';
+import { MARK_BG_COLOR, MARK_COLOR } from '@udecode/plate-font';
 
 export function FixedToolbarButtons() {
   const readOnly = useEditorReadOnly();
@@ -67,6 +67,13 @@ export function FixedToolbarButtons() {
 
               <ColorDropdownMenu nodeType={MARK_COLOR} tooltip="Text Color">
                 <Icons.color className={iconVariants({ variant: 'toolbar' })} />
+              </ColorDropdownMenu>
+
+              <ColorDropdownMenu
+                nodeType={MARK_BG_COLOR}
+                tooltip="Highlight Color"
+              >
+                <Icons.bg className={iconVariants({ variant: 'toolbar' })} />
               </ColorDropdownMenu>
 
               <AlignDropdownMenu />
