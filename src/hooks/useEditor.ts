@@ -85,6 +85,7 @@ export function useEditor(initialValue:Value){
                         if (text.underline){ className += " underline" }
                         if (text.strikethrough){ className += " line-through" }
                         if (text.color){ style = {...style, color: text.color as string} }
+                        if (text.backgroundColor){ style = {...style, backgroundColor: text.backgroundColor as string} }
 
                         return (
                             createElement("span", { className, style }, text.text as string)
