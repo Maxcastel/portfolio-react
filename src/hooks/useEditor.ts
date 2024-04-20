@@ -1,5 +1,10 @@
-import { TElement, TText, Value } from "@udecode/plate-common";
+import { TDescendant, TElement, TText, Value } from "@udecode/plate-common";
 import { createElement, useEffect, useState } from "react";
+
+interface Style{
+    color?: string;
+    backgroundColor?: string;
+}
 
 export function useEditor(initialValue:Value){
     const [contentJson, setContentJson] = useState<Value>(initialValue);
@@ -74,13 +79,15 @@ export function useEditor(initialValue:Value){
                     :
                     createElement(element.type, { className }, element.children.map((text) => {
                         let className:string="";
+                        let style:Style = {};
                         if (text.bold){ className += " font-bold" }
                         if (text.italic){ className += " italic" }
                         if (text.underline){ className += " underline" }
                         if (text.strikethrough){ className += " line-through" }
+                        if (text.color){ style = {...style, color: text.color as string} }
 
                         return (
-                            createElement("span", { className }, text.text as string)
+                            createElement("span", { className, style }, text.text as string)
                         )
                     }))
                 )
