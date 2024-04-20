@@ -77,18 +77,27 @@ export function useEditor(initialValue:Value){
                                 ) 
                             )
                     :
-                    createElement(element.type, { className }, element.children.map((text) => {
+                    createElement(element.type, { className }, element.children.map((child:TDescendant) => {
                         let className:string="";
                         let style:Style = {};
-                        if (text.bold){ className += " font-bold" }
-                        if (text.italic){ className += " italic" }
-                        if (text.underline){ className += " underline" }
-                        if (text.strikethrough){ className += " line-through" }
-                        if (text.color){ style = {...style, color: text.color as string} }
-                        if (text.backgroundColor){ style = {...style, backgroundColor: text.backgroundColor as string} }
+                        if (child.bold){ className += " font-bold" }
+                        if (child.italic){ className += " italic" }
+                        if (child.underline){ className += " underline" }
+                        if (child.strikethrough){ className += " line-through" }
+                        if (child.color){ style = {...style, color: child.color as string} }
+                        if (child.backgroundColor){ style = {...style, backgroundColor: child.backgroundColor as string} }
+
 
                         return (
-                            createElement("span", { className, style }, text.text as string)
+                            child.type === "a" ? 
+                                createElement("a", { className: "font-semibold underline underline-offset-4", href: child.url }, child.children.map((child) => {
+                                    let style:Style = {};
+                                    if (child.color){ style = {...style, color: child.color as string} }
+                                    if (child.backgroundColor){ style = {...style, backgroundColor: child.backgroundColor as string} }
+
+                                    return createElement("span", { className, style }, child.text as string)
+                                }))
+                            : createElement("span", { className, style }, child.text as string)
                         )
                     }))
                 )
