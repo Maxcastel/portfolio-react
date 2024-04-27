@@ -26,6 +26,7 @@ import {
   CommandList,
   CommandSeparator,
 } from "@/components/ui/command";
+import { useTranslation } from "react-i18next";
 
 const multiSelectVariants = cva(
   "m-1",
@@ -83,6 +84,7 @@ const MultiSelectFormField = React.forwardRef<
     },
     ref
   ) => {
+    const { t } = useTranslation();
     const [selectedValues, setSelectedValues] = React.useState<string[]>(
       defaultValue || []
     );
@@ -199,7 +201,7 @@ const MultiSelectFormField = React.forwardRef<
         >
           <Command>
             <CommandInput
-              placeholder="Search..."
+              placeholder={t('createProject.multiselect.search')+"..."}
               onKeyDown={handleInputKeyDown}
             />
             <CommandList>
@@ -271,7 +273,7 @@ const MultiSelectFormField = React.forwardRef<
                     }}
                     className="flex-1 justify-center cursor-pointer"
                   >
-                    Close
+                    {t('createProject.multiselect.close')}
                   </CommandItem>
                 </div>
               </CommandGroup>
