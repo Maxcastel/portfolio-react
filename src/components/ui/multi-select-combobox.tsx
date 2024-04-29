@@ -201,7 +201,7 @@ const MultiSelectFormField = React.forwardRef<
         >
           <Command>
             <CommandInput
-              placeholder={t('createProject.multiselect.search')+"..."}
+              placeholder={t('projectEditor.multiselect.search')+"..."}
               onKeyDown={handleInputKeyDown}
             />
             <CommandList>
@@ -273,7 +273,7 @@ const MultiSelectFormField = React.forwardRef<
                     }}
                     className="flex-1 justify-center cursor-pointer"
                   >
-                    {t('createProject.multiselect.close')}
+                    {t('projectEditor.multiselect.close')}
                   </CommandItem>
                 </div>
               </CommandGroup>
