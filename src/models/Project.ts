@@ -7,9 +7,10 @@ import { Type } from "./Type"
 export interface Project{
     id: number
     title: string
+    url: string
     description: string
     content: string
-    url: string
+    link: string
     github: string
     date: string
     thumbnail: string
