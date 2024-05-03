@@ -38,7 +38,7 @@ export function ContactEditor({initialValue,onWrite,onValueChange}:{initialValue
 
                         <Editor
                             className="px-[50px] py-16"
-                            autoFocus
+                            //autoFocus
                             focusRing={false}
                             variant="outline"
                             size="md"
