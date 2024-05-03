@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Bars3Icon } from '@heroicons/react/24/outline'
 import { LangueSwitcher } from "../widgets/LangueSwitcher";
 import { ModeToggle } from "../widgets/ModeToggle";
+import { HashLink } from 'react-router-hash-link';
 
 export function Header(){
     const { t } = useTranslation();
@@ -11,19 +12,27 @@ export function Header(){
         { name: t('experience'), href: '/#experience' },
         { name: t('competences'), href: '/#skills' },
         { name: 'Formations', href: '/#formations' },
+        { name: 'Contact', href: '/#contact' },
     ]
 
     return (
         <header className='top-0'>
 
             <nav className='py-4 flex justify-between items-center'>
-                <a href='/' className="flex lg:flex-1 font-semibold">Max</a>
-            
-                <div className="lg:flex lg:gap-x-12 hidden">
+                <div className="flex lg:flex-1">
+                    <a href='/' className="font-semibold">
+                        Max
+                    </a>
+                </div>
+
+                <div className="lg:flex lg:gap-x-10 hidden">
                     {navigation.map((item) => (
-                        <a key={item.name} href={item.href} className="text-sm font-semibold leading-6">
+                        <HashLink key={item.name} 
+                            smooth to={item.href} 
+                            className="text-sm font-semibold leading-6 text-primary hover:text-primary/50"
+                        >
                             {item.name}
-                        </a>
+                        </HashLink>
                     ))}
                 </div>
 
