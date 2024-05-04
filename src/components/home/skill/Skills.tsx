@@ -18,14 +18,16 @@ import {
 import { Bootstrap2Svg } from "@/svg/Bootstrap2Svg";
 import { TailwindSvg } from "@/svg/TailwindSvg";
 import { JavaIconSvg } from "@/svg/JavaIconSvg";
+import { useTranslation } from "react-i18next";
 
 export function Skills(){
+    const { t } = useTranslation();
 
     return (
         <section className="flex flex-col min-h-screen" id="skills">
 
             <h2 className="text-center text-4xl font-bold my-10">
-                Competences
+                {t('competences')}
             </h2>
             
             <div className="flex flex-col items-center gap-y-6 mx-auto w-full max-w-[710px]">
