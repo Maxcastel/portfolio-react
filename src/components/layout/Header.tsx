@@ -29,7 +29,7 @@ export function Header(){
                     {navigation.map((item) => (
                         <HashLink key={item.name} 
                             smooth to={item.href} 
-                            className="text-sm font-semibold leading-6 text-primary hover:text-primary/50"
+                            className="text-sm font-semibold leading-6 text-primary hover:text-primary/70"
                         >
                             {item.name}
                         </HashLink>
