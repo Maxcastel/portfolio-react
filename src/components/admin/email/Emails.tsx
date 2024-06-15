@@ -4,6 +4,7 @@ import { EmailCard } from "./EmailCard";
 
 export function Emails(){
     const [emails, setEmails] = useState<Email[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         fetch("/api/emails")
@@ -11,8 +12,11 @@ export function Emails(){
         .then((emails) => {
           console.log("emails",emails.data);
           setEmails(emails.data);
+          setLoading(false);
         })
     }, [])
+
+    if (loading) return
 
     return (
         <>
