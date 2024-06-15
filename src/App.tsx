@@ -4,7 +4,6 @@ import { Layout } from "./components/layout/Layout"
 import { ThemeProvider } from "@/components/theme-provider"
 import { CreateProject } from "./components/admin/project/editor/CreateProject"
 import { Login } from "./components/admin/Login"
-import { Formm } from "./components/admin/Formm"
 import { ShowProject } from "./components/home/project/ShowProject"
 import { LayoutAdmin } from "./components/admin/layout/LayoutAdmin"
 import { Projects } from "./components/admin/project/Projects"
@@ -16,6 +15,22 @@ import { useEffect } from "react"
 import { useUserContext } from "./components/UserContextProvider"
 
 function App() {
+  const {setIsAuth,getToken,setIsLoading} = useUserContext();
+
+  useEffect(() => {
+    const token = getToken();
+
+    fetch("/api/isAuth", {
+      headers: {Authorization: `Bearer ${token}`}
+    })
+    .then((res) => res.json())
+    .then((response) => {
+        console.log("response App",response);
+        setIsLoading(false);
+        setIsAuth(response.code === 200);
+    })
+    
+  }, [location.pathname])
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
