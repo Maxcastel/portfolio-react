@@ -10,4 +10,13 @@ export default defineConfig({
       '@': path.resolve(__dirname, "./src"),
     },
   },
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://api.portfolio.mcastel.fr/api",
+        rewrite: (path) => path.replace(/^\/api/, ""),
+        changeOrigin: true,
+      },
+    },
+  },
 })
