@@ -23,14 +23,12 @@ export function Projects(){
     const [isFilteredByAll, setIsFilteredByAll] = useState(true)
     const [isFilteredByScolaire, setIsFilteredByScolaire] = useState(false)
     const [isFilteredByPersonnel, setIsFilteredByPersonnel] = useState(false)
-    const [isFilteredByProfessionnel, setIsFilteredByProfessionnel] = useState(false)
 
     const filteredByAll = () => {
         setIsFilteredByAll(true);
 
         setIsFilteredByScolaire(false);
         setIsFilteredByPersonnel(false);
-        setIsFilteredByProfessionnel(false);
 
         setProjects(allProjects)
     }
@@ -40,7 +38,6 @@ export function Projects(){
 
         setIsFilteredByAll(false);
         setIsFilteredByPersonnel(false);
-        setIsFilteredByProfessionnel(false);
 
         setProjects(allProjects.filter((projet) => projet.type.name === 'Scolaire'))
     }
@@ -50,19 +47,8 @@ export function Projects(){
 
         setIsFilteredByAll(false);
         setIsFilteredByScolaire(false);
-        setIsFilteredByProfessionnel(false);
 
         setProjects(allProjects.filter((projet) => projet.type.name === 'Personnel'))
-    }
-    
-    const filteredByProfessionnel = () => {
-        setIsFilteredByProfessionnel(true);
-
-        setIsFilteredByAll(false);
-        setIsFilteredByScolaire(false);
-        setIsFilteredByPersonnel(false);
-
-        setProjects(allProjects.filter((projet) => projet.type.name === 'Professionnel'))
     }
 
     return (
@@ -90,11 +76,6 @@ export function Projects(){
                             onClick={filteredByPersonnel}
                         >
                             {t('project.type.personnel')}
-                        </Button>
-                        <Button className={`rounded-full ${isFilteredByProfessionnel ? 'text-primary-foreground' : 'text-primary bg-transparent hover:bg-primary hover:text-primary-foreground'} border-2 border-primary border-solid`}
-                            onClick={filteredByProfessionnel}
-                        >
-                            {t('project.type.professionnel')}
                         </Button>
                     </div>
                 </div>
