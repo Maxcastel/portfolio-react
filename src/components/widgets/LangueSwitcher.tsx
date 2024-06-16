@@ -25,7 +25,7 @@ export function LangueSwitcher(){
                     const langue:LangueName = lng as LangueName;
                     if (i18n.resolvedLanguage === lng){
                         return (
-                            <button key={lng} className="lg:flex lg:items-center gap-x-2 " onClick={() => i18n.changeLanguage(lng)}>
+                            <button key={lng} className="flex items-center gap-x-2 " onClick={() => i18n.changeLanguage(lng)}>
                                 <img src={lngs[langue].icon} width="30" height="20" />
                                 <p className='text-primary font-semibold'>{lngs[langue].langName}</p>
                             </button>
@@ -43,7 +43,7 @@ export function LangueSwitcher(){
                                 const langue:LangueName = lng as LangueName;
                                 if (i18n.resolvedLanguage !== lng){
                                     return (
-                                        <button key={lng} className="lg:flex lg:items-center gap-x-2" onClick={() => i18n.changeLanguage(lng)}>
+                                        <button key={lng} className="flex items-center gap-x-2" onClick={() => i18n.changeLanguage(lng)}>
                                             <img src={lngs[langue].icon} width="32" height="20" />
                                             <p>{lngs[langue].langName}</p>
                                         </button>
