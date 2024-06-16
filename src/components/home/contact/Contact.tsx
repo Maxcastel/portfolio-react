@@ -7,7 +7,7 @@ export function Contact(){
     const { t } = useTranslation();
 
     return (
-        <section className="flex flex-col dark:bg-slate-900 pb-[5vh]" id="contact">
+        <section className="flex flex-col dark:bg-slate-900 pb-[10vh]" id="contact">
             <h2 className="text-center text-4xl font-bold my-10">
                 {t('contact.title')}
             </h2>

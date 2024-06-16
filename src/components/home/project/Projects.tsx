@@ -52,7 +52,7 @@ export function Projects(){
     }
 
     return (
-        <section className="flex flex-col min-h-screen pb-[5vh]  dark:bg-slate-900 " id="projects">
+        <section className="flex flex-col min-h-screen pb-[10vh]  dark:bg-slate-900 " id="projects">
             <h2 className="text-center text-4xl font-bold my-10">
                 {t("projets")}
             </h2>
