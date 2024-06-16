@@ -50,7 +50,7 @@ export function Header(){
                         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
                         onClick={() => setIsMenuOpen(true)}
                     >
-                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                        <Bars3Icon className="h-6 w-6 dark:text-white" aria-hidden="true" />
                     </button>
                 </div>
             </nav>  
