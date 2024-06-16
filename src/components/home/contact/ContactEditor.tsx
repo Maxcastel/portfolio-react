@@ -6,14 +6,14 @@ import { plugins } from '@/lib/plate/plugins';
 import { TooltipProvider } from '@/components/plate-ui/tooltip';
 import { FixedToolbar } from '@/components/plate-ui/fixed-toolbar';
 import { FloatingToolbar } from '@/components/plate-ui/floating-toolbar';
-import { FloatingToolbarButtons } from '@/components/plate-ui/floating-toolbar-buttons';
 import { FixedToolbarButtons } from '@/components/plate-ui/fixed-toolbar-buttons-contact';
+import { FloatingToolbarButtons } from '@/components/plate-ui/floating-toolbar-buttons-contact';
 
 export function ContactEditor({initialValue,onWrite,onValueChange}:{initialValue:string,onWrite:(newJson:Value)=>void,onValueChange:(value: string) => void}){
     const containerRef = useRef(null);
 
     return (
-        <div className='w-full bg-red-50 max-w-[calc(680px-50px)]'>
+        <div className='w-full max-w-[calc(680px-50px)]'>
         <TooltipProvider>
             <div className="relative">
                 <Plate 
