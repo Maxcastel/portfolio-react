@@ -24,7 +24,7 @@ export function Skills(){
     const { t } = useTranslation();
 
     return (
-        <section className="flex flex-col min-h-screen" id="skills">
+        <section className="flex flex-col pb-[5vh]" id="skills">
 
             <h2 className="text-center text-4xl font-bold my-10">
                 {t('competences')}
