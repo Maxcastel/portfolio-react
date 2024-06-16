@@ -24,7 +24,7 @@ import { Loader2 } from "lucide-react"
 
 export function ContactForm(){
     const { t } = useTranslation();
-    const [contentJson, setContentJson, contentHtml] = useContactEditor();
+    const [_, setContentJson, contentHtml] = useContactEditor();
     const [loading, setLoading] = useState<boolean>(false);
 
     const formSchema = z.object({
@@ -57,17 +57,16 @@ export function ContactForm(){
     }) 
 
     function onSubmit(data: z.infer<typeof formSchema>) {
-        console.log("data",data);
-        console.log("contentHtml",renderToString(contentHtml))
         setLoading(true);
 
-        fetch(import.meta.env.VITE_API_URL+"/email", {
+        fetch("/api/email", {
             method: 'POST',
             body: JSON.stringify({
                 name: data.nom,
                 email: data.email,
                 subject: data.objet,
                 message: renderToString(contentHtml),
+                sendDate: new Date().toISOString(),
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8'
@@ -75,6 +74,7 @@ export function ContactForm(){
         })
         .then(response => response.json())
         .then(response => {
+            console.log(response);
             setLoading(false);
             if (response.status == 200){
                 toast.success("Email envoyé avec succes");
@@ -83,7 +83,7 @@ export function ContactForm(){
                 toast.error("Une erreur est survenue lors de l'envoi de l'email");
             }
         })
-        .catch(error => toast.error("Une erreur est survenue lors de l'envoi de l'email : "+error))
+        .catch(() => toast.error("Une erreur est survenue lors de l'envoi de l'email"))
     }
 
     return (
@@ -147,30 +147,11 @@ export function ContactForm(){
                         )}
                     />
 
-                    {/* <div className='my-4'>
-                        <p className='font-medium text-base mb-6'>{t('projectEditor.json')}</p>
-                        <code className='text-base'>
-                            {contentJson}
-                        </code>
-                    </div> */}
-
                     <div className="space-x-2">
-                        <Button disabled={loading}>
+                        <Button disabled={loading} type="submit">
                             {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                             {t('contact.btn')}
                         </Button>
-                        {/* <Button disabled={loading}>
-                            {loading && <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />}
-                            {t('contact.btn')}
-                        </Button> */}
-                        {/* <Button disabled>
-                            {t('contact.btn')}
-                            <Loader2 className="ml-2 h-4 w-4 animate-spin" />
-                        </Button>
-                        <Button disabled>
-                            {t('contact.btn')}
-                            <ReloadIcon className="ml-2 h-4 w-4 animate-spin" />
-                        </Button> */}
                     </div>
                 </div>
             </form>
