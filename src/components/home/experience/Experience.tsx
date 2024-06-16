@@ -31,8 +31,10 @@ export function Experience(){
     ]
 
     return (
-        <section className="flex flex-col  min-h-screen" id="experience">
-            <h2 className="text-center text-4xl font-bold my-10">Experience</h2>
+        <section className="flex flex-col pb-[5vh]" id="experience">
+            <h2 className="text-center text-4xl font-bold my-10">
+                Experience
+            </h2>
 
             <div className="flex flex-col gap-4 items-center">
                 {experiences.slice().reverse().map((experience) => (
