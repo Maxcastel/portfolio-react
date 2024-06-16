@@ -1,9 +1,163 @@
 {
     "projets": "Projets",
-    "competences": "Competences",
     "experience": "Experience",
+    "competences": "Competences",
 
     "developpeurfullstack": "Developpeur Full Stack",
+
+    "scolaire": "Projet scolaire",
+    "personnel": "Projet personnel",
+    "professionnel": "Projet professionnel",
+
+    "project":{
+        "trierpar": "Trier par",
+        "type":{
+            "tout": "Tout",
+            "scolaire": "Scolaire",
+            "personnel": "Personnel",
+            "professionnel": "Professionnel",
+            "random": "Aléatoire"
+        },
+        "category":{
+            "logiciel": "Logiciel"
+        },
+        "btn":{
+            "voir": "Voir"
+        }
+    },
+
+    "projectTable":{
+        "title": "Titre",
+        "languages": "Langages",
+        "category": "Categorie",
+        "classe": "Classe",
+        "projets": "projets",
+        "createProject": "Créer un projet"
+    },
+
+    "loginCard":{
+        "login": "Connexion",
+        "password": "Mot de passe",
+        "empty":{
+            "email": "L'email est requis",
+            "password": "Le mot de passe est requis"
+        },
+        "error":{
+            "email": "L'email n'est pas valide"
+        },
+        "loginError": "Mauvais email ou mot de passe",
+        "btn": "Se Connecter"
+    },
+
+    "projectEditor": {
+        "create":{
+          "h1": "Creer un projet", 
+          "btn": "Créer",
+          "toast":{
+            "success":{
+                "title": "Projet créé"
+            },
+            "error":{
+                "title": "Erreur lors de la création du projet"
+            }
+          } 
+        },
+        "edit":{
+            "h1": "Modifier le projet", 
+            "btn": "Modifier",
+            "toast":{
+                "success":{
+                    "title": "Projet modifié"
+                },
+                "error":{
+                    "title": "Erreur lors de la modification du projet"
+                }
+            } 
+        },
+        "title": "Titre :",
+        "description": "Description :",
+        "miniature": "Minaiture :",
+        "content": "Contenu :",
+        "category": "Categorie :",
+        "type": "Type :",
+        "classe": "Classe :",
+        "languages": "Langages :",
+        "frameworks": "Frameworks :",
+        "url": "Url :",
+        "github": "Github :",
+        "date": "Date :",
+        "empty":{
+            "title": "Le titre est requis",
+            "description": "La description est requise",
+            "miniature": "La miniature est requise",
+            "content": "Le contenu est requis",
+            "date": "La date est requise",
+            "languages": "Selectionnez au moins 1 langage",
+            "type": "Selectionnez 1 type",
+            "category": "Selectionnez 1 categorie"
+        },
+        "error":{
+            "title": "Le titre doit contenir au moins 5 caractères",
+            "description": "La description doit contenir au moins 5 caractères",
+            "content": "Le contenu doit contenir au moins 10 caractères",
+            "url": "L'url n'est pas valide",
+            "type": "Selectionnez 1 type au maximum",
+            "category": "Selectionnez 1 categorie au maximum",
+            "classe": "Selectionnez 1 classe au maximum"
+        },
+        "placeholder":{
+            "title": "Titre du projet",
+            "description": "Description du projet",
+            "miniature": "Miniature du projet",
+            "url": "Lien vers le projet",
+            "github": "Github du projet",
+            "date": "Date du projet"
+        },
+        "json": "Json :",
+        "preview": "Prévisualisation :",
+        "multiselect":{
+            "frameworks": "Selectionnez un framework",
+            "languages": "Selectionnez un langage",
+            "type": "Selectionnez un type",
+            "category": "Selectionnez une categorie",
+            "classe": "Selectionnez une classe",
+            "close": "Fermer",
+            "search": "Rechercher"
+        }
+    },
+
+    "janvier": "Janvier",
+    "fevrier": "Février",
+    "mai": "Mai",
+    "juin": "Juin",
+
+    "contact": {
+        "title": "Me Contacter",
+        "nom": "Nom :",
+        "email": "Email :",
+        "objet": "Objet :",
+        "from": "De :",
+        "message": "Message :",
+        "empty": {
+            "nom": "Le nom est requis",
+            "email": "L'email est requis",
+            "objet": "L'objet est requis",
+            "message": "Le message est requis"
+        },
+        "error": {
+            "nom": "Le nom doit contenir au moins 3 caractères",
+            "email": "L'email n'est pas valide",
+            "objet": "L'objet doit contenir au moins 5 caractères",
+            "message": "Le message doit contenir au moins 10 caractères"
+        },
+        "placeholder": {
+            "nom": "Saisissez votre nom...",
+            "objet": "Saisissez l'objet...",
+            "message": "Saisissez votre message ici..."
+        },
+        "btn": "Envoyer",
+        "seeBtn": "Voir"
+    },
 
     "langues": {
         "francais": "Français",

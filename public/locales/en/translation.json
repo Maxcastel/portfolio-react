@@ -1,9 +1,164 @@
 {
     "projets": "Projects",
-    "competences": "Skills",
     "experience": "Experience",
+    "competences": "Skills",
+    
+    "developpeurfullstack": "Full Stack Developer",
 
-    "developpeurfullstack": "Full Stack Developpeur",
+    "scolaire": "School project",
+    "personnel": "Personnal project",
+    "professionnel": "Professionnal project",
+
+    "project":{
+        "trierpar": "Sort by",
+        "type":{
+            "tout": "All",
+            "scolaire": "School",
+            "personnel": "Personnal",
+            "professionnel": "Professionnal",
+            "random": "Random"
+        },
+        "category":{
+            "logiciel": "Software"
+        },
+        "btn":{
+            "voir": "See"
+        }
+    },
+
+    "projectTable":{
+        "title": "Title",
+        "languages": "Languages",
+        "category": "Category",
+        "classe": "School",
+        "projets": "projects",
+        "createProject": "Create a project"
+    },
+
+    "loginCard":{
+        "login": "Login",
+        "password": "Password",
+        "empty":{
+            "email": "Email is required",
+            "password": "Password is required"
+        },
+        "error":{
+            "email": "Invalid email"
+        },
+        "loginError": "Incorrect email or password",
+        "btn": "Sign In"
+    },
+
+    "projectEditor": {
+        "create":{
+            "h1": "Create a project", 
+            "btn": "Create",
+            "toast":{
+                "success":{
+                    "title": "Project created"
+                },
+                "error":{
+                    "title": "Error while creating project"
+                }
+              } 
+        },
+        "edit":{
+            "h1": "Edit project", 
+            "btn": "Edit",
+            "toast":{
+                "success":{
+                    "title": "Project edited"
+                },
+                "error":{
+                    "title": "Error during project modification"
+                }
+            } 
+        },
+        "title": "Title",
+        "description": "Description:",
+        "miniature": "Thumbnail:",
+        "content":  "Content:",
+        "category": "Category:",
+        "type": "Type:",
+        "classe": "School:",
+        "languages": "Languages:",
+        "frameworks": "Frameworks:",
+        "url": "Url:",
+        "github": "Github:",
+        "date": "Date:",
+        "empty":{
+            "title": "Title is required",
+            "description": "Description is required",
+            "miniature": "Thumbnail is required",
+            "content": "Content is required",
+            "date": "Date is required",
+            "languages": "Select at least one language",
+            "type": "Select one type",
+            "category": "Select one category"
+        },
+        "error":{
+            "title": "Title must contain at least 5 characters",
+            "description": "Description must contain at least 5 characters",
+            "content": "Content must contain at least 10 characters",
+            "url": "Invalid url",
+            "type": "Select up to 1 type",
+            "category": "Select up to 1 category",
+            "classe": "Select up to 1 classe"
+        },
+        "placeholder":{
+            "title": "Project Title",
+            "description": "Project Description",
+            "miniature": "Project Thumbnail",
+            "url": "Link to the project",
+            "github": "Github of the project",
+            "date": "Project date"
+        },
+        "json": "Json:",
+        "preview": "Preview:",
+        "multiselect":{
+            "frameworks": "Select frameworks",
+            "languages": "Select languages",
+            "type": "Select a type",
+            "category": "Select a category",
+            "classe": "Select a shool",
+            "close": "Close",
+            "search": "Search"
+        },
+        "btn": "Create"
+    },
+
+    "janvier": "January",
+    "fevrier": "February",
+    "mai": "May",
+    "juin": "June",
+
+    "contact": {
+        "title": "Contact Me",
+        "nom": "Name:",
+        "email": "Email:",
+        "objet": "Subject:",
+        "from": "From:",
+        "message": "Message:",
+        "empty": {
+            "nom": "Name is required",
+            "email": "Email is required",
+            "objet": "Subject is required",
+            "message": "Message is required"
+        },
+        "error": {
+            "nom": "Name must contain at least 5 characters",
+            "email": "Invalid email",
+            "objet": "Subject must contain at least 5 characters",
+            "message": "Message must contain at least 10 characters"
+        },
+        "placeholder": {
+            "nom": "Enter your name...",
+            "objet": "Enter the subject...",
+            "message": "Enter your message here..."
+        },
+        "btn": "Send",
+        "seeBtn": "See"
+    },
 
     "langues": {
         "francais": "French",
