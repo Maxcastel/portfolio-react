@@ -59,9 +59,9 @@ export function Projects(){
             
             <div className="flex flex-col gap-y-6">
 
-                <div className="flex justify-center items-center">
-                    <p className="mr-6">{t('project.trierpar')}</p>
-                    <div className="flex flex-wrap gap-4">
+                <div className="flex max-[445px]:flex-col justify-center items-center">
+                    <p className="min-[445px]:mr-6 max-[445px]:mb-4">{t('project.trierpar')}</p>
+                    <div className="flex max-[445px]:flex-col flex-wrap gap-4">
                         <Button className={`rounded-full ${isFilteredByAll ? 'text-primary-foreground' : 'text-primary bg-transparent hover:bg-primary hover:text-primary-foreground'} border-2 border-primary border-solid`}
                             onClick={filteredByAll}
                         >
