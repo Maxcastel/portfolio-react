@@ -160,6 +160,11 @@
         "seeBtn": "See"
     },
 
+    "footer":{
+        "title": "Made by Maxence Castel using Symfony and React",
+        "ctxt": "All rights reserved."
+    },
+
     "langues": {
         "francais": "French",
         "anglais": "English"

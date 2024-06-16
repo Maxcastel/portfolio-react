@@ -159,6 +159,11 @@
         "seeBtn": "Voir"
     },
 
+    "footer":{
+        "title": "Fait par Maxence Castel en Symfony et React",
+        "ctxt": "Tous droits réservés."
+    },
+
     "langues": {
         "francais": "Français",
         "anglais": "Anglais"
