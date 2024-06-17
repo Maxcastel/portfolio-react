@@ -11,7 +11,7 @@ export function ShowEmail(){
     const { t } = useTranslation();
 
     useEffect(() => {
-        fetch(`/api/emails/${id}`)
+        fetch(`${import.meta.env.VITE_API_URL}/emails/${id}`)
         .then((res) => res.json())
         .then((email) => {
             setEmail(email.data);

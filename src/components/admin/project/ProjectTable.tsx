@@ -16,7 +16,7 @@ export function ProjectTable({projects}:{projects:Project[]}){
     const { t } = useTranslation();
 
     const deleteProject = (id:number) => {
-        fetch(`/api/projects/${id}`, { 
+        fetch(`${import.meta.env.VITE_API_URL}/projects/${id}`, { 
             method: 'DELETE',
         })
         .then(res => res.json())

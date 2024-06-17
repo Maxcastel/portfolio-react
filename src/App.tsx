@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     const token = getToken();
 
-    fetch("/api/isAuth", {
+    fetch(import.meta.env.VITE_API_URL+"/isAuth", {
       headers: {Authorization: `Bearer ${token}`}
     })
     .then((res) => res.json())

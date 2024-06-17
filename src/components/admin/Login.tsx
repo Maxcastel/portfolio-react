@@ -54,7 +54,7 @@ export function Login(){
         setLoading(true);
 
         try{
-            fetch("/api/login_check", {
+            fetch(import.meta.env.VITE_API_URL+"/login_check", {
                 method: 'POST',
                 body: JSON.stringify({
                     username: data.email,

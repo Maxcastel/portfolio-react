@@ -57,7 +57,7 @@ export function ContactForm(){
     function onSubmit(data: z.infer<typeof formSchema>) {
         setLoading(true);
 
-        fetch("/api/email", {
+        fetch(import.meta.env.VITE_API_URL+"/email", {
             method: 'POST',
             body: JSON.stringify({
                 name: data.nom,

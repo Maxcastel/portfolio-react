@@ -10,7 +10,7 @@ export function ShowProject(){
     
 
     useEffect(() => {
-        fetch(`/api/projects/${url}`)
+        fetch(`${import.meta.env.VITE_API_URL}/projects/${url}`)
         .then((res) => res.json())
         .then((project) => {
             setContentJson(JSON.parse(project.data.content) as Value);

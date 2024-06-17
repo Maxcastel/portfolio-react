@@ -7,7 +7,7 @@ export function Emails(){
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        fetch("/api/emails")
+        fetch(import.meta.env.VITE_API_URL+"/emails")
         .then((res) => res.json())
         .then((emails) => {
           setEmails(emails.data);

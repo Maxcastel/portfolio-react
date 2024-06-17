@@ -13,7 +13,7 @@ export function Projects(){
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        fetch("/api/projects")
+        fetch(import.meta.env.VITE_API_URL+"/projects")
         .then((res) => res.json())
         .then((projects) => {
           setProjects(projects.data);

@@ -121,7 +121,7 @@ export function CreateProject(){
         console.log("data",data)
         setLoading(true);
 
-        fetch("/api/projects", {
+        fetch(import.meta.env.VITE_API_URL+"/projects", {
             method: 'POST',
             body: JSON.stringify({
                 title: data.title,

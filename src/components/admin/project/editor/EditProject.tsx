@@ -107,7 +107,7 @@ export function EditProject() {
     })
 
     useEffect(() => {
-        fetch("/api/projects")
+        fetch(import.meta.env.VITE_API_URL+"/projects")
         .then((res) => res.json())
         .then((projects) => {
             const project = projects.data.find((project:Project) => project.id === Number(id)) as Project;
@@ -137,7 +137,7 @@ export function EditProject() {
         console.log("data",data)
         setLoading(true);
 
-        fetch(`/api/projects/${id}`, {
+        fetch(`${import.meta.env.VITE_API_URL}/projects/${id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 title: data.title,

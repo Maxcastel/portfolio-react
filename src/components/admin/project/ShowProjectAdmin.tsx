@@ -12,7 +12,7 @@ export function ShowProjectAdmin(){
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        fetch("/api/projects")
+        fetch(import.meta.env.VITE_API_URL+"/projects")
         .then((res) => res.json())
         .then((projects) => {
             const project = projects.data.find((project:Project) => project.id === Number(id)) as Project;
