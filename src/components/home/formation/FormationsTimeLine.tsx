@@ -1,32 +1,32 @@
-const formations = [
-    {
-        id: 1,
-        name: 'BTS SIO',
-        startDate: 2022,
-        endDate: 2024,
-        option: "SLAM",
-        schoolName: "Lycée Gaston Berger",
-        location: "Lille"
-    },
-    {
-        id: 2,
-        name: 'BUT Informatique',
-        startDate: 2021,
-        endDate: 2022,
-        option: null,
-        schoolName: "IUT A",
-        location: "Villeneuve D'ascq"
-    },
-    {
-        id: 3,
-        name: 'Terminale STI2D',
-        startDate: 2020,
-        endDate: 2021,
-        option: "SIN",
-        schoolName: "Lycée Colbert",
-        location: "Tourcoing"
-    },
-]
+// const formations = [
+//     {
+//         id: 1,
+//         name: 'BTS SIO',
+//         startDate: 2022,
+//         endDate: 2024,
+//         option: "SLAM",
+//         schoolName: "Lycée Gaston Berger",
+//         location: "Lille"
+//     },
+//     {
+//         id: 2,
+//         name: 'BUT Informatique',
+//         startDate: 2021,
+//         endDate: 2022,
+//         option: null,
+//         schoolName: "IUT A",
+//         location: "Villeneuve D'ascq"
+//     },
+//     {
+//         id: 3,
+//         name: 'Terminale STI2D',
+//         startDate: 2020,
+//         endDate: 2021,
+//         option: "SIN",
+//         schoolName: "Lycée Colbert",
+//         location: "Tourcoing"
+//     },
+// ]
 
 import {
     Timeline,

@@ -1,6 +1,5 @@
 import {
   MARK_BOLD,
-  MARK_CODE,
   MARK_ITALIC,
   MARK_STRIKETHROUGH,
   MARK_UNDERLINE,
@@ -9,10 +8,8 @@ import {
 import { Icons, iconVariants } from '@/components/icons';
 
 import { MarkToolbarButton } from './mark-toolbar-button';
-import { MoreDropdownMenu } from './more-dropdown-menu';
 import { TurnIntoDropdownMenu } from './turn-into-dropdown-menu';
 import { AlignDropdownMenu } from './align-dropdown-menu';
-import { LinkToolbarButton } from './link-toolbar-button';
 import { ColorDropdownMenu } from './color-dropdown-menu';
 import { MARK_BG_COLOR, MARK_COLOR } from '@udecode/plate-font';
 

@@ -1,21 +1,11 @@
 import { ProjectEditor } from "./ProjectEditor";
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { useTranslation } from "react-i18next";
 
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -26,8 +16,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { useEditor } from "@/hooks/useEditor";
-import { ELEMENT_PARAGRAPH } from "@udecode/plate-paragraph";
-import { TElement, TText, Value } from "@udecode/plate-common";
+import { Value } from "@udecode/plate-common";
 import MultiSelectFormField from "@/components/ui/multi-select-combobox";
 import { frameworksList } from "@/data/frameworks";
 import { languagesList } from "@/data/languages";
@@ -41,10 +30,6 @@ import { Calendar } from "@/components/ui/calendar";
 import { cn } from "@udecode/cn";
 import { toast } from "sonner";
 import { classeList } from "@/data/classes";
-import { JSX } from "react/jsx-runtime";
-import { Framework } from "@/models/Framework";
-import { Language } from "@/models/Language";
-import { ReloadIcon } from "@radix-ui/react-icons"
 import { Loader2 } from "lucide-react"
 import slugify from 'react-slugify';
 import { useEffect, useState } from "react";

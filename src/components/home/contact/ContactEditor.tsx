@@ -9,7 +9,7 @@ import { FloatingToolbar } from '@/components/plate-ui/floating-toolbar';
 import { FixedToolbarButtons } from '@/components/plate-ui/fixed-toolbar-buttons-contact';
 import { FloatingToolbarButtons } from '@/components/plate-ui/floating-toolbar-buttons-contact';
 
-export function ContactEditor({initialValue,onWrite,onValueChange}:{initialValue:string,onWrite:(newJson:Value)=>void,onValueChange:(value: string) => void}){
+export function ContactEditor({/*initialValue,*/onWrite,onValueChange}:{/*initialValue:string,*/onWrite:(newJson:Value)=>void,onValueChange:(value: string) => void}){
     const containerRef = useRef(null);
 
     return (

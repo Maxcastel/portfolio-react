@@ -1,10 +1,10 @@
 import { TDescendant, TElement, Value } from "@udecode/plate-common";
 import { CSSProperties, createElement, useEffect, useState } from "react";
 
-interface Style{
-    color?: string;
-    backgroundColor?: string;
-}
+// interface Style{
+//     color?: string;
+//     backgroundColor?: string;
+// }
 
 type TextAlign = "center" | "left" | "right";
 

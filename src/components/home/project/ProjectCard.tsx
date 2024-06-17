@@ -12,6 +12,8 @@ import { Project } from "@/models/Project";
 import { Button } from "@/components/ui/button";
 import { Language } from "@/models/Language";
 
+type shortNameInLower = "php" | "js" | "ts" | "java"
+
 export function ProjectCard({project}:{project:Project}){
     const { t } = useTranslation();
 
@@ -45,7 +47,7 @@ export function ProjectCard({project}:{project:Project}){
                 </Button>
                 <div className="flex flex-wrap gap-2">
                     {project.languages.map((language:Language) => (
-                        <Badge key={language.shortName} className="px-3 py-1" variant={language.shortName.toLowerCase()}>
+                        <Badge key={language.shortName} className="px-3 py-1" variant={language.shortName.toLowerCase() as shortNameInLower}>
                             {language.shortName}
                         </Badge>
                     ))}

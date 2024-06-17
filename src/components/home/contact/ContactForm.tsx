@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -19,7 +18,6 @@ import { toast } from "sonner";
 import { useContactEditor } from "@/hooks/useContactEditor";
 import { renderToString } from 'react-dom/server';
 import { useState } from "react";
-import { ReloadIcon } from "@radix-ui/react-icons"
 import { Loader2 } from "lucide-react"
 
 export function ContactForm(){
@@ -137,7 +135,7 @@ export function ContactForm(){
                                 <FormLabel className="text-base">{t('contact.message')}</FormLabel>
                                 <FormControl>
                                     <ContactEditor
-                                        initialValue={field.value}
+                                        //initialValue={field.value}
                                         onWrite={(newJson:Value) => setContentJson(newJson)}
                                         onValueChange={field.onChange}
                                     />

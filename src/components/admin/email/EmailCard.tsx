@@ -2,7 +2,6 @@ import { useTranslation } from "react-i18next";
 import { Email } from "./Email";
 import {
     Card,
-    CardContent,
     CardDescription,
     CardFooter,
     CardHeader,

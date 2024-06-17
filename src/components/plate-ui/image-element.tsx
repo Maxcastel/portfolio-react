@@ -1,4 +1,3 @@
-import React from 'react';
 import { cn, withRef } from '@udecode/cn';
 import { PlateElement, withHOC } from '@udecode/plate-common';
 import { ELEMENT_IMAGE, Image, useMediaState } from '@udecode/plate-media';

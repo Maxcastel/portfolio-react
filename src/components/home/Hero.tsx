@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 export function Hero(){
     const { t } = useTranslation();
 
-    const HeaderContentHeight = 40;
-    const HeaderPaddingY = 16;
+    // const HeaderContentHeight = 40;
+    // const HeaderPaddingY = 16;
 
     return (
         <div className="px-4 flex items-center h-[calc(100vh-(24px+32px))] lg:h-[calc(100vh-(40px+32px))] pb-[calc(24px+32px)] lg:pb-[calc(40px+32px)]">

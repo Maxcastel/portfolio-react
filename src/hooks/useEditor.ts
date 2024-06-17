@@ -1,9 +1,13 @@
-import { TDescendant, TElement, TText, Value } from "@udecode/plate-common";
+import { TDescendant, TElement, Value } from "@udecode/plate-common";
 import { createElement, useEffect, useState } from "react";
 
 interface Style{
     color?: string;
     backgroundColor?: string;
+}
+
+interface TElement2 extends TElement {
+    caption?: { text: string }[];
 }
 
 export function useEditor(initialValue?:Value){
@@ -14,7 +18,7 @@ export function useEditor(initialValue?:Value){
         let element;
         if (contentJson){
             element = createElement("div", null,
-                contentJson.map((element:TElement) => {
+                contentJson.map((element:TElement2) => {
                     let className:string="";
                     switch (element.type){
                         case "p":
@@ -60,6 +64,9 @@ export function useEditor(initialValue?:Value){
                         className += " h-[28px]"
                     }
 
+                    if (element.type !== "img") console.log("element.type !== img",element);
+                    // if (element.caption) console.log("element.caption",element.caption);
+                    
                     return (
                         element.type === "img" ?
                             element.caption ?
@@ -91,7 +98,7 @@ export function useEditor(initialValue?:Value){
 
                             return (
                                 child.type === "a" ? 
-                                    createElement("a", { className: "font-semibold underline underline-offset-4", href: child.url }, child.children.map((child) => {
+                                    createElement("a", { className: "font-semibold underline underline-offset-4", href: child.url }, (child.children as TDescendant[]).map((child:TDescendant) => {
                                         let style:Style = {};
                                         if (child.color){ style = {...style, color: child.color as string} }
                                         if (child.backgroundColor){ style = {...style, backgroundColor: child.backgroundColor as string} }

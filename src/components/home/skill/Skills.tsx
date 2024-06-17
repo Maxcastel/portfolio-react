@@ -1,12 +1,10 @@
 import { Nodejs2Svg } from "@/svg/Nodejs2Svg";
-import { ReactNativeSvg } from "@/svg/ReactNativeSvg";
 import { ReactSvg } from "@/svg/ReactSvg";
 import { SpringSvg } from "@/svg/SpringSvg";
 import { SymfonySvg } from "@/svg/SymfonySvg";
 import { CSSSvg } from "@/svg/CSSSvg";
 import { HTMLSvg } from "@/svg/HTMLSvg";
 import { JavaScriptSvg } from "@/svg/JavaScriptSvg";
-import { JavaSvg } from "@/svg/JavaSvg";
 import { PHPSvg } from "@/svg/PHPSvg";
 import { TypeScriptSvg } from "@/svg/TypeScriptSvg";
 import {

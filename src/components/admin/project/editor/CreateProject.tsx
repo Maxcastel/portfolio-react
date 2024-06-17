@@ -1,21 +1,11 @@
 import { ProjectEditor } from "./ProjectEditor";
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { useTranslation } from "react-i18next";
 
 import {
     Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -41,15 +31,11 @@ import { Calendar } from "@/components/ui/calendar";
 import { cn } from "@udecode/cn";
 import { toast } from "sonner";
 import { classeList } from "@/data/classes";
-import { JSX } from "react/jsx-runtime";
 import { Framework } from "@/models/Framework";
 import { Language } from "@/models/Language";
-import { ReloadIcon } from "@radix-ui/react-icons"
 import { Loader2 } from "lucide-react"
 import slugify from 'react-slugify';
-import { useEffect, useState } from "react";
-import { useUserContext } from "@/components/UserContextProvider";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const initialValue = [
     {
