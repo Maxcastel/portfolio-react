@@ -79,7 +79,6 @@ export function Login(){
             })
         }
         catch(e){
-            console.log("erreur",e);
             setLoading(false);
         }
     }

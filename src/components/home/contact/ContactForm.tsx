@@ -72,7 +72,6 @@ export function ContactForm(){
         })
         .then(response => response.json())
         .then(response => {
-            console.log(response);
             setLoading(false);
             if (response.status == 200){
                 toast.success("Email envoyé avec succes");

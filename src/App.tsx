@@ -25,7 +25,6 @@ function App() {
     })
     .then((res) => res.json())
     .then((response) => {
-        console.log("response App",response);
         setIsLoading(false);
         setIsAuth(response.code === 200);
     })

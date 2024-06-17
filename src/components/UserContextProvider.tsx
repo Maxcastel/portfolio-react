@@ -26,9 +26,6 @@ export function UserContextProvider ({children}:{children:React.ReactNode}){
     const [isAuth, setIsAuth] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
 
-    console.log("isAuth in UserContextProvider",isAuth);
-    console.log("isLoading in UserContextProvider",isLoading);
-
     const setToken = (token:string) => {
         window.localStorage.setItem('token', token);
     }

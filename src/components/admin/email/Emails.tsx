@@ -10,7 +10,6 @@ export function Emails(){
         fetch("/api/emails")
         .then((res) => res.json())
         .then((emails) => {
-          console.log("emails",emails.data);
           setEmails(emails.data);
           setLoading(false);
         })
