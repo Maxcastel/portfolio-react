@@ -15,11 +15,7 @@ export function LayoutAdmin(){
         }
     },[isLoading])
 
-    if (isLoading) return (
-        <h1 className="text-3xl font-semibold p-60">
-            LOADING...
-        </h1>
-    )
+    if (isLoading) return 
 
     return (
         <div className="min-h-full">
