@@ -15,7 +15,7 @@ export function useContactEditor(initialValue?:Value){
     useEffect(() => {
         let element;
         if (contentJson){
-            element = createElement("div", null, contentJson.map((element:TElement) => {
+            element = createElement("div", null, contentJson.map((element:TElement, index) => {
                 let style:CSSProperties = {};
                 switch (element.type){
                     case "p":
@@ -49,7 +49,7 @@ export function useContactEditor(initialValue?:Value){
                     style = {...style, textAlign: element.align as TextAlign}
                 }
                 return (
-                    createElement(element.type, { style }, element.children.map((child:TDescendant) => {
+                    createElement(element.type, { key: index, style }, element.children.map((child:TDescendant, index) => {
                         let tags = [];
                         if (child.bold) tags.push("b")
                         if (child.italic) tags.push("i")
@@ -75,8 +75,8 @@ export function useContactEditor(initialValue?:Value){
 
                         return (
                             tags.length === 0 ?
-                                createElement("span", { style }, child.text as string)
-                            : tags.reduceRight((acc:any, tag) => createElement(tag, { style }, acc), child.text as string)
+                                createElement("span", { key: index, style }, child.text as string)
+                            : tags.reduceRight((acc:any, tag) => createElement(tag, { key: index, style }, acc), child.text as string)
                         )
 
                         // if (tags.length === 0) {
