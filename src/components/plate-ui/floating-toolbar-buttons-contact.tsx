@@ -12,43 +12,43 @@ import { TurnIntoDropdownMenu } from './turn-into-dropdown-menu';
 import { AlignDropdownMenu } from './align-dropdown-menu';
 import { ColorDropdownMenu } from './color-dropdown-menu';
 import { MARK_BG_COLOR, MARK_COLOR } from '@udecode/plate-font';
+import { useTranslation } from 'react-i18next';
 
 export function FloatingToolbarButtons() {
+  const { t } = useTranslation();
 
   return (
     <>
       
       <TurnIntoDropdownMenu />
 
-      <MarkToolbarButton nodeType={MARK_BOLD} tooltip="Bold (⌘+B)">
+      <MarkToolbarButton nodeType={MARK_BOLD} tooltip={t('editor.toolbar.tooltip.bold')}>
         <Icons.bold />
       </MarkToolbarButton>
 
-      <MarkToolbarButton nodeType={MARK_ITALIC} tooltip="Italic (⌘+I)">
+      <MarkToolbarButton nodeType={MARK_ITALIC} tooltip={t('editor.toolbar.tooltip.italic')}>
         <Icons.italic />
       </MarkToolbarButton>
 
       <MarkToolbarButton
         nodeType={MARK_UNDERLINE}
-        tooltip="Underline (⌘+U)"
-      >
+        tooltip={t('editor.toolbar.tooltip.underline')}>
         <Icons.underline />
       </MarkToolbarButton>
 
       <MarkToolbarButton
         nodeType={MARK_STRIKETHROUGH}
-        tooltip="Strikethrough (⌘+⇧+M)"
-      >
+        tooltip={t('editor.toolbar.tooltip.strikethrough')}>
         <Icons.strikethrough />
       </MarkToolbarButton>
 
-      <ColorDropdownMenu nodeType={MARK_COLOR} tooltip="Text Color">
+      <ColorDropdownMenu nodeType={MARK_COLOR} tooltip={t('editor.toolbar.tooltip.textColor')}>
           <Icons.color className={iconVariants({ variant: 'toolbar' })} />
       </ColorDropdownMenu>
 
       <ColorDropdownMenu
           nodeType={MARK_BG_COLOR}
-          tooltip="Highlight Color"
+          tooltip={t('editor.toolbar.tooltip.highlight')}
       >
           <Icons.bg className={iconVariants({ variant: 'toolbar' })} />
       </ColorDropdownMenu>
