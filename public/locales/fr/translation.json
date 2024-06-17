@@ -159,6 +159,28 @@
         "seeBtn": "Voir"
     },
 
+    "editor":{
+        "placeholder":{
+            "p": "Saisir un paragraphe"
+        },
+        "toolbar":{
+            "tooltip":{
+                "insert": "Insérer",
+                "basicBlocks": "Blocs de base",
+                "paragraph": "Paragraphe",
+                "heading": "Titre",
+                "turnInto": "Transformer en",
+                "bold": "Gras (Ctrl+B)",
+                "italic": "Italique (Ctrl+I)",
+                "underline": "Soulignage (Ctrl+U)",
+                "strikethrough": "Barré",
+                "textColor": "Couleur du texte",
+                "highlight": "Couleur de surlignage",
+                "align": "Alignment"
+            }
+        }
+    },
+
     "footer":{
         "title": "Fait par Maxence Castel en Symfony et React",
         "ctxt": "Tous droits réservés."

@@ -160,6 +160,28 @@
         "seeBtn": "See"
     },
 
+    "editor":{
+        "placeholder":{
+            "p": "Type a paragraph"
+        },
+        "toolbar":{
+            "tooltip":{
+                "insert": "Insert",
+                "basicBlocks": "Basic blocks",
+                "paragraph": "Paragraph",
+                "heading": "Heading",
+                "turnInto": "Turn into",
+                "bold": "Bold (Ctrl+B)",
+                "italic": "Italic (Ctrl+I)",
+                "underline": "Underline (Ctrl+U)",
+                "strikethrough": "Strikethrough",
+                "textColor": "Text Color",
+                "highlight": "Couleur de surlignage",
+                "align": "Align"
+            }
+        }
+    },
+
     "footer":{
         "title": "Made by Maxence Castel using Symfony and React",
         "ctxt": "All rights reserved."

@@ -14,8 +14,10 @@ import {
   import { AlignDropdownMenu } from './align-dropdown-menu';
   import { ColorDropdownMenu } from './color-dropdown-menu';
   import { MARK_BG_COLOR, MARK_COLOR } from '@udecode/plate-font';
+import { useTranslation } from 'react-i18next';
   
   export function FixedToolbarButtons() {
+    const { t } = useTranslation();
   
     return (
       <div className="w-full overflow-hidden">
@@ -31,35 +33,35 @@ import {
             </ToolbarGroup>
 
             <ToolbarGroup>
-                <MarkToolbarButton tooltip="Bold (⌘+B)" nodeType={MARK_BOLD}>
+                <MarkToolbarButton tooltip={t('editor.toolbar.tooltip.bold')} nodeType={MARK_BOLD}>
                     <Icons.bold />
                 </MarkToolbarButton>
 
-                <MarkToolbarButton tooltip="Italic (⌘+I)" nodeType={MARK_ITALIC}>
+                <MarkToolbarButton tooltip={t('editor.toolbar.tooltip.italic')} nodeType={MARK_ITALIC}>
                     <Icons.italic />
                 </MarkToolbarButton>
 
                 <MarkToolbarButton
-                    tooltip="Underline (⌘+U)"
+                    tooltip={t('editor.toolbar.tooltip.underline')}
                     nodeType={MARK_UNDERLINE}
                 >
                     <Icons.underline />
                 </MarkToolbarButton>
 
                 <MarkToolbarButton
-                    tooltip="Strikethrough (⌘+⇧+M)"
+                    tooltip={t('editor.toolbar.tooltip.strikethrough')}
                     nodeType={MARK_STRIKETHROUGH}
                 >
                     <Icons.strikethrough />
                 </MarkToolbarButton>
 
-                <ColorDropdownMenu nodeType={MARK_COLOR} tooltip="Text Color">
+                <ColorDropdownMenu nodeType={MARK_COLOR} tooltip={t('editor.toolbar.tooltip.textColor')}>
                     <Icons.color className={iconVariants({ variant: 'toolbar' })} />
                 </ColorDropdownMenu>
 
                 <ColorDropdownMenu
                     nodeType={MARK_BG_COLOR}
-                    tooltip="Highlight Color"
+                    tooltip={t('editor.toolbar.tooltip.highlight')}
                 >
                     <Icons.bg className={iconVariants({ variant: 'toolbar' })} />
                 </ColorDropdownMenu>

@@ -15,6 +15,7 @@ import {
   useOpenState,
 } from './dropdown-menu';
 import { ToolbarButton } from './toolbar';
+import { useTranslation } from 'react-i18next';
 
 const items = [
   {
@@ -36,6 +37,7 @@ const items = [
 ];
 
 export function AlignDropdownMenu({ children, ...props }: DropdownMenuProps) {
+  const { t } = useTranslation();
   const state = useAlignDropdownMenuState();
   const { radioGroupProps } = useAlignDropdownMenu(state);
 
@@ -47,7 +49,7 @@ export function AlignDropdownMenu({ children, ...props }: DropdownMenuProps) {
   return (
     <DropdownMenu modal={false} {...openState} {...props}>
       <DropdownMenuTrigger asChild>
-        <ToolbarButton pressed={openState.open} tooltip="Align" isDropdown>
+        <ToolbarButton pressed={openState.open} tooltip={t('editor.toolbar.tooltip.align')} isDropdown>
           <IconValue />
         </ToolbarButton>
       </DropdownMenuTrigger>

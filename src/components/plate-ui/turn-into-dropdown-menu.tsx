@@ -32,55 +32,58 @@ import {
   useOpenState,
 } from './dropdown-menu';
 import { ToolbarButton } from './toolbar';
-
-const items = [
-  {
-    value: ELEMENT_PARAGRAPH,
-    label: 'Paragraph',
-    description: 'Paragraph',
-    icon: Icons.paragraph,
-  },
-  {
-    value: ELEMENT_H1,
-    label: 'Heading 1',
-    description: 'Heading 1',
-    icon: Icons.h1,
-  },
-  {
-    value: ELEMENT_H2,
-    label: 'Heading 2',
-    description: 'Heading 2',
-    icon: Icons.h2,
-  },
-  {
-    value: ELEMENT_H3,
-    label: 'Heading 3',
-    description: 'Heading 3',
-    icon: Icons.h3,
-  },
-  {
-    value: ELEMENT_H4,
-    label: 'Heading 4',
-    description: 'Heading 4',
-    icon: Icons.h4,
-  },
-  {
-    value: ELEMENT_H5,
-    label: 'Heading 5',
-    description: 'Heading 5',
-    icon: Icons.h5,
-  },
-  {
-    value: ELEMENT_H6,
-    label: 'Heading 6',
-    description: 'Heading 6',
-    icon: Icons.h6,
-  },
-];
-
-const defaultItem = items.find((item) => item.value === ELEMENT_PARAGRAPH)!;
+import { useTranslation } from 'react-i18next';
 
 export function TurnIntoDropdownMenu(props: DropdownMenuProps) {
+  const { t } = useTranslation();
+
+  const items = [
+    {
+      value: ELEMENT_PARAGRAPH,
+      label: t('editor.toolbar.tooltip.paragraph'),
+      description: 'Paragraph',
+      icon: Icons.paragraph,
+    },
+    {
+      value: ELEMENT_H1,
+      label: t('editor.toolbar.tooltip.heading')+" "+1,
+      description: t('editor.toolbar.tooltip.heading')+" "+1,
+      icon: Icons.h1,
+    },
+    {
+      value: ELEMENT_H2,
+      label: t('editor.toolbar.tooltip.heading')+" "+2,
+      description: 'Heading 2',
+      icon: Icons.h2,
+    },
+    {
+      value: ELEMENT_H3,
+      label: t('editor.toolbar.tooltip.heading')+" "+3,
+      description: 'Heading 3',
+      icon: Icons.h3,
+    },
+    {
+      value: ELEMENT_H4,
+      label: t('editor.toolbar.tooltip.heading')+" "+4,
+      description: 'Heading 4',
+      icon: Icons.h4,
+    },
+    {
+      value: ELEMENT_H5,
+      label: t('editor.toolbar.tooltip.heading')+" "+5,
+      description: 'Heading 5',
+      icon: Icons.h5,
+    },
+    {
+      value: ELEMENT_H6,
+      label: t('editor.toolbar.tooltip.heading')+" "+6,
+      description: 'Heading 6',
+      icon: Icons.h6,
+    },
+  ];
+  
+  const defaultItem = items.find((item) => item.value === ELEMENT_PARAGRAPH)!;
+
   const value: string = useEditorSelector((editor) => {
     if (isCollapsed(editor.selection)) {
       const entry = findNode<TElement>(editor, {
@@ -110,7 +113,7 @@ export function TurnIntoDropdownMenu(props: DropdownMenuProps) {
       <DropdownMenuTrigger asChild>
         <ToolbarButton
           pressed={openState.open}
-          tooltip="Turn into"
+          tooltip={t('editor.toolbar.tooltip.turnInto')}
           isDropdown
           className="lg:min-w-[130px]"
         >
@@ -120,7 +123,7 @@ export function TurnIntoDropdownMenu(props: DropdownMenuProps) {
       </DropdownMenuTrigger>
 
       <DropdownMenuContent align="start" className="min-w-0">
-        <DropdownMenuLabel>Turn into</DropdownMenuLabel>
+        <DropdownMenuLabel>{t('editor.toolbar.tooltip.turnInto')}</DropdownMenuLabel>
 
         <DropdownMenuRadioGroup
           className="flex flex-col gap-0.5"

@@ -27,65 +27,68 @@ import {
   useOpenState,
 } from './dropdown-menu';
 import { ToolbarButton } from './toolbar';
-
-const items = [
-  {
-    label: 'Basic blocks',
-    items: [
-      {
-        value: ELEMENT_PARAGRAPH,
-        label: 'Paragraph',
-        description: 'Paragraph',
-        icon: Icons.paragraph,
-      },
-      {
-        value: ELEMENT_H1,
-        label: 'Heading 1',
-        description: 'Heading 1',
-        icon: Icons.h1,
-      },
-      {
-        value: ELEMENT_H2,
-        label: 'Heading 2',
-        description: 'Heading 2',
-        icon: Icons.h2,
-      },
-      {
-        value: ELEMENT_H3,
-        label: 'Heading 3',
-        description: 'Heading 3',
-        icon: Icons.h3,
-      },
-      {
-        value: ELEMENT_H4,
-        label: 'Heading 4',
-        description: 'Heading 4',
-        icon: Icons.h4,
-      },
-      {
-        value: ELEMENT_H5,
-        label: 'Heading 5',
-        description: 'Heading 5',
-        icon: Icons.h5,
-      },
-      {
-        value: ELEMENT_H6,
-        label: 'Heading 6',
-        description: 'Heading 6',
-        icon: Icons.h6,
-      },
-    ],
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export function InsertDropdownMenu(props: DropdownMenuProps) {
+  const { t } = useTranslation();
+
+  const items = [
+    {
+      label: t('editor.toolbar.tooltip.basicBlocks'),
+      items: [
+        {
+          value: ELEMENT_PARAGRAPH,
+          label:  t('editor.toolbar.tooltip.paragraph'),
+          description: 'Paragraph',
+          icon: Icons.paragraph,
+        },
+        {
+          value: ELEMENT_H1,
+          label: t('editor.toolbar.tooltip.heading')+" "+1,
+          description: 'Heading 1',
+          icon: Icons.h1,
+        },
+        {
+          value: ELEMENT_H2,
+          label: t('editor.toolbar.tooltip.heading')+" "+2,
+          description: 'Heading 2',
+          icon: Icons.h2,
+        },
+        {
+          value: ELEMENT_H3,
+          label: t('editor.toolbar.tooltip.heading')+" "+3,
+          description: 'Heading 3',
+          icon: Icons.h3,
+        },
+        {
+          value: ELEMENT_H4,
+          label: t('editor.toolbar.tooltip.heading')+" "+4,
+          description: 'Heading 4',
+          icon: Icons.h4,
+        },
+        {
+          value: ELEMENT_H5,
+          label: t('editor.toolbar.tooltip.heading')+" "+5,
+          description: 'Heading 5',
+          icon: Icons.h5,
+        },
+        {
+          value: ELEMENT_H6,
+          label: t('editor.toolbar.tooltip.heading')+" "+6,
+          description: 'Heading 6',
+          icon: Icons.h6,
+        },
+      ],
+    },
+  ];
+
   const editor = useEditorRef();
   const openState = useOpenState();
 
   return (
     <DropdownMenu modal={false} {...openState} {...props}>
       <DropdownMenuTrigger asChild>
-        <ToolbarButton pressed={openState.open} tooltip="Insert" isDropdown>
+        <ToolbarButton pressed={openState.open} tooltip={t('editor.toolbar.tooltip.insert')} isDropdown>
           <Icons.add />
         </ToolbarButton>
       </DropdownMenuTrigger>
