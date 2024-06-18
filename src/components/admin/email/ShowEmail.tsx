@@ -33,7 +33,7 @@ export function ShowEmail(){
                 </h2>
                 <p className="text-muted-foreground">{new Date(email.sendDate).toLocaleString('fr-FR', { timeZone: 'UTC'})}</p>
 
-                <div className="mt-8 break-words min-w-80 max-w-lg bg-red-50" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(email.message) }} />
+                <div className="mt-8 break-words min-w-80 max-w-lg" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(email.message) }} />
             </>}
         </div>
     )
