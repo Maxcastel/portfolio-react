@@ -21,7 +21,7 @@ export function ShowProject(){
     if (loading) return 
 
     return (
-        <div className="mt-4 min-h-[calc(100vh-(24px+32px))] pb-[5vh]">
+        <div className="mt-4 lg:min-h-[calc(100vh-(40px+32px+1rem))] min-h-[calc(100vh-(24px+32px+1rem))] pb-[5vh]">
             {contentHtml}
         </div>
     )
