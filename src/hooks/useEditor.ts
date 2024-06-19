@@ -28,7 +28,7 @@ export function useEditor(initialValue?:Value){
                             className += "text-4xl font-bold mb-1"
                             break;
                         case "h2":
-                            className += "mt-[1.4em] text-2xl font-semibold mb-px"
+                            className += "mt-[1.4em] text-3xl font-bold mb-px"
                             break;
                         case "h3":
                             className += "text-xl font-semibold mb-px"
