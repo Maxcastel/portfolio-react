@@ -15,4 +15,8 @@ export const frameworksList = [
       value: "react",
       label: "React",
     },
+    {
+      value: "react native",
+      label: "React Native",
+    },
 ];
