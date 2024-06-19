@@ -19,4 +19,8 @@ export const frameworksList = [
       value: "react native",
       label: "React Native",
     },
+    {
+      value: "javafx",
+      label: "JavaFX",
+    },
 ];
