@@ -36,7 +36,7 @@ export function ProjectCard({project}:{project:Project}){
             <CardContent className="flex flex-col gap-y-3.5">
                 <p className="break-words">{project.description}</p>
                 <div className="flex">
-                    <img className="rounded-lg w-full max-h-[240px] object-cover" src={project.thumbnail}  />
+                    <img className="rounded-lg w-full h-[240px] object-cover" src={project.thumbnail}  />
                 </div>
             </CardContent>
             <CardFooter className="flex items-center justify-between">
