@@ -23,4 +23,8 @@ export const frameworksList = [
       value: "javafx",
       label: "JavaFX",
     },
+    {
+      value: "spring",
+      label: "Spring",
+    },
 ];
