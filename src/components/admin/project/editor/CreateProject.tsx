@@ -246,7 +246,7 @@ export function CreateProject(){
                             </div>
                             <div className='mt-8'>
                                 <p className='font-medium text-base mb-6'>{t('projectEditor.preview')}</p>
-                                <div className='border border-black w-full px-[50px] py-16'>
+                                <div className='border border-primary w-full px-[50px] py-16'>
                                     {contentHtml}
                                 </div>
                             </div>
