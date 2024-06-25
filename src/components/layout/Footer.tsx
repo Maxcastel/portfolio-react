@@ -7,12 +7,12 @@ export function Footer(){
 
     return (
         <footer className="max-lg:flex max-lg:flex-col-reverse max-lg:gap-y-2 max-lg:pb-4">
-            <div className="text-center lg:mb-6">
+            <div className="text-center">
                 <p>{t('footer.title')}</p> 
             </div>
             <div className="flex lg:flex-row max-lg:flex-col-reverse max-lg:gap-y-2 lg:justify-between items-center min-h-16">
                 <div className="flex lg:pl-4 gap-x-2 lg:mt-2">
-                    <p>© 2024 Castel Maxence. {t('footer.ctxt')}</p>
+                    <p>© 2024 Castel Maxence.</p>
                 </div>
                 
                 <div className="flex lg:pr-4 gap-x-2 lg:mt-2">
