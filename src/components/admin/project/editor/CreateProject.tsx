@@ -139,7 +139,8 @@ export function CreateProject(){
                 classe_name: data.classe.length === 0 ? null : data.classe[0],
             }),
             headers: {
-                'Content-type': 'application/json; charset=UTF-8'
+                'Content-type': 'application/json; charset=UTF-8',
+                'Authorization': `Bearer ${window.localStorage.getItem('token')}`
             }
         })
         .then(response => response.json())
