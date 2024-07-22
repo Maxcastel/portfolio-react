@@ -46,7 +46,7 @@ export function FormationsTimeLine(){
                 <TimelineHeading side="right" variant="secondary" className="text-base">
                     2022 - 2024
                 </TimelineHeading>
-                <TimelineDot status="current" />
+                <TimelineDot status="done" />
                 <TimelineLine done />
                 <TimelineContent side="left" className="text-lg">
                     Lycée Gaston Berger <br />
