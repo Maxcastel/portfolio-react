@@ -7,14 +7,16 @@ export function Emails(){
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        fetch(import.meta.env.VITE_API_URL+"/emails")
+        fetch(import.meta.env.VITE_API_URL+"/emails", {
+            headers: {Authorization: `Bearer ${window.localStorage.getItem("token")}`}
+        })
         .then((res) => res.json())
         .then((emails) => {
           setEmails(emails.data);
           setLoading(false);
         })
     }, [])
-
+    
     if (loading) return
 
     return (
