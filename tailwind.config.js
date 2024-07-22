@@ -76,6 +76,9 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
         "spinner": "spinner 1.2s linear infinite"
       },
+      fontFamily: {
+        sans: ['Open Sans', 'sans-serif'],
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
