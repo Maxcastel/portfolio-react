@@ -31,7 +31,7 @@ export function Experience(){
     ]
 
     return (
-        <section className="flex flex-col pb-[10vh]" id="experience">
+        <section className="flex flex-col pb-[15vh]" id="experience">
             <h2 className="text-center text-4xl font-bold my-10">
                 Experience
             </h2>

@@ -4,7 +4,7 @@ import { FormationsTimeLine } from "./FormationsTimeLine";
 export function Formations(){
 
     return (
-        <section className="flex flex-col pb-[10vh]" id="formations">
+        <section className="flex flex-col pb-[15vh]" id="formations">
             <h2 className="text-center text-4xl font-bold my-10">
                 Formations
             </h2>
